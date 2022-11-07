@@ -24,6 +24,7 @@ const options = {
   mainSelector: ".blog-index",
   childrenSelector: [
     { key: "date", selector: "time", attr: "" /* not essential if exist on type */, type: "text" },
+    // by default, the first option that is taken into consideration is att
     { key: "version", selector: "a", attr: "" /* not essential if exist on type */ , type: "text" },
     { key: "link", selector: "a", attr: "href", type: "" /* not essential if exist on attr */ },
   ],
