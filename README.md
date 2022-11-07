@@ -70,9 +70,10 @@ const options = {
 ## options
 
 * [url](#url) - urls to scraper site web, _required_
-* [mainSelector](#mainselector) - indicates the main selector where to start scraping, _required_
-* [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive, _required_
-
+* [mainSelector](#mainselector) - indicates the main selector where to start scraping, ** _required_
+* [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive, ** _required_
+* _**canBeEmpty**_ - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
+ 
 #### url
 ```javascript
 const options = {
