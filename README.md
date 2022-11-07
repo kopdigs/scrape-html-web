@@ -34,6 +34,22 @@ const options = {
 })();
 ```
 
+## Response
+```javascript
+
+//Example response
+
+[
+  { date: '04 Nov', version: 'Node v18.12.1 (LTS)' },
+  { date: '04 Nov', version: 'Node v19.0.1 (Current)' },
+  { date: '04 Nov', version: 'Node v16.18.1 (LTS)' },
+  ...
+  { date: '11 Jan', version: 'Node v17.3.1 (Current)' },
+  { date: '11 Jan', version: 'Node v12.22.9 (LTS)' }
+]
+
+```
+
 ## options
 
 * [url](#url) - urls to scraper site web, _required_
