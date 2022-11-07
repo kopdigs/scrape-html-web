@@ -116,14 +116,86 @@ const options = {
 };
 ```
 
-- **key:** is the name of the key
-- **selector:** is the name of the selector that is searched for in the HTML that is contained by the parent
-- **attr:** _only for specific items_ [img, a] indicates what kind of attribute you want to get
-  > Some of the more common attributes are − [ className, tagName, id, href, title, rel, src, style ]
-- **type:** indicates the type of value to be obtained
+- **key:** is the name of the key ** _required_
+- **selector:** is the name of the selector that is searched for in the HTML that is contained by the parent ** _required_
+- **attr:** _only for specific items_ [img, a] indicates what kind of attribute you want to get ** _not required_
+  > Some of the more common attributes are − [ className, tagName, id, href, title, rel, src, style ] 
+- **type:** indicates the type of value to be obtained ** _not required_ (Default: "Text")
   > possible values: [ **text** , **html** ]
-- **canBeEmpty:** - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
-  > { key: "title", selector: ".title", type: "text", canBeEmpty: true },
+
+  __________________ **_optional_** __________________
+- [replace](#replace) - with this parameter it is possible to have text or html inside a selector. 
+  It is possible to provide it with either a RegExp or a custom function ** _not required_
+  
+- canBeEmpty: - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
+  > { key: "title", selector: ".title", type: "text", canBeEmpty: true },  Example response: {title: ''} if text in selector id empty
+
+
+##### replace
+
+```javascript
+
+const options = {
+  url: "https://nodejs.org/en/blog/",
+  mainSelector: ".blog-index",
+  childrenSelector: [
+    {
+      key: "date",
+      selector: "time",
+      type: "text",
+      replace: (text) => text + " 2022", // I pass a custom function that adds the "2022" test to the date I get from the selector
+    },
+    {
+      key: "version",
+      selector: "a",
+      type: "html",
+      replace: /[{()}]/g,   // I pass a regex to remove the round paraesthesia within the html
+    },
+    {
+      key: "link",
+      selector: "a",
+      attr: "href",
+    },
+  ],
+};
+
+(async () => {
+  const data = await scrapeHtmlWeb(options);
+
+  console.log("example 2 :", data);
+})();
+
+```
+
+```javascript
+
+//Example response
+
+[
+  {
+    date: '04 Nov 2022',
+    version: '<a href="/en/blog/release/v18.12.1/">Node v18.12.1 LTS</a>',
+    link: '/en/blog/release/v18.12.1/'
+  },
+  {
+    date: '04 Nov 2022',
+    version: '<a href="/en/blog/release/v19.0.1/">Node v19.0.1 Current</a>',
+    link: '/en/blog/release/v19.0.1/'
+  },
+  ...
+  {
+    date: '11 Jan 2022',
+    version: '<a href="/en/blog/release/v17.3.1/">Node v17.3.1 Current</a>',
+    link: '/en/blog/release/v17.3.1/'
+  },
+  {
+    date: '11 Jan 2022',
+    version: '<a href="/en/blog/release/v12.22.9/">Node v12.22.9 LTS</a>',
+    link: '/en/blog/release/v12.22.9/'
+  }
+]
+
+```
 
 
 #### Please note: 🙏
