@@ -110,6 +110,7 @@ const options = {
   childrenSelector: [
     { key: "date", selector: "time", attr: "" /* not essential */, type: "text" },
     { key: "version", selector: "a", attr: "" /* not essential */ , type: "text" },
+    { key: "link", selector: "a", attr: "href", type: "" /* not essential if exist on attr */ },
   ],
 };
 ```
@@ -117,6 +118,6 @@ const options = {
 - **key:** is the name of the key
 - **selector:** is the name of the selector that is searched for in the HTML that is contained by the parent
 - **attr:** _only for specific items_ [img, a] indicates what kind of attribute you want to get
-  > possible values: [ **href** , **src** ]
+  > Some of the more common attributes are − [ className, tagName, id, href, title, rel, src, style ]
 - **type:** indicates the type of value to be obtained
   > possible values: [ **text** , **html** ]
