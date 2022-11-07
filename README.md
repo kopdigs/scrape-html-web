@@ -23,8 +23,9 @@ const options = {
   url: "https://nodejs.org/en/blog/",
   mainSelector: ".blog-index",
   childrenSelector: [
-    { key: "date", selector: "time", attr: "" /* not essential */, type: "text" },
-    { key: "version", selector: "a", attr: "" /* not essential */ , type: "text" },
+    { key: "date", selector: "time", attr: "" /* not essential if exist on type */, type: "text" },
+    { key: "version", selector: "a", attr: "" /* not essential if exist on type */ , type: "text" },
+    { key: "link", selector: "a", attr: "href", type: "" /* not essential if exist on attr */ },
   ],
 };
 
@@ -40,12 +41,27 @@ const options = {
 //Example response
 
 [
-  { date: '04 Nov', version: 'Node v18.12.1 (LTS)' },
-  { date: '04 Nov', version: 'Node v19.0.1 (Current)' },
-  { date: '04 Nov', version: 'Node v16.18.1 (LTS)' },
+  {
+    date: '04 Nov',
+    version: 'Node v18.12.1 (LTS)',
+    link: '/en/blog/release/v18.12.1/'
+  },
+  {
+    date: '04 Nov',
+    version: 'Node v19.0.1 (Current)',
+    link: '/en/blog/release/v19.0.1/'
+  },
   ...
-  { date: '11 Jan', version: 'Node v17.3.1 (Current)' },
-  { date: '11 Jan', version: 'Node v12.22.9 (LTS)' }
+  {
+    date: '11 Jan',
+    version: 'Node v17.3.1 (Current)',
+    link: '/en/blog/release/v17.3.1/'
+  },
+  {
+    date: '11 Jan',
+    version: 'Node v12.22.9 (LTS)',
+    link: '/en/blog/release/v12.22.9/'
+  }
 ]
 
 ```
