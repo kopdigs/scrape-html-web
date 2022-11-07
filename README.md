@@ -1,6 +1,11 @@
 # scrape-html-web
 
-Website scraper
+Extract content from a static HTML website.
+
+**Note:**
+_two dependencies are included in order to work:_
+* [axios](https://www.npmjs.com/package/cheerio) - retrieve the web page
+* [cheerio](https://www.npmjs.com/package/axios) - manage content scraping based you have formatted selectors
 
 ## Installation
 
