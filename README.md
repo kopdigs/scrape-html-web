@@ -72,7 +72,6 @@ const options = {
 * [url](#url) - urls to scraper site web, _required_
 * [mainSelector](#mainselector) - indicates the main selector where to start scraping, ** _required_
 * [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive, ** _required_
-* _**canBeEmpty**_ - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
  
 #### url
 ```javascript
@@ -123,3 +122,10 @@ const options = {
   > Some of the more common attributes are − [ className, tagName, id, href, title, rel, src, style ]
 - **type:** indicates the type of value to be obtained
   > possible values: [ **text** , **html** ]
+- **canBeEmpty:** - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
+  > { key: "title", selector: ".title", type: "text", canBeEmpty: true },
+
+
+#### Please note: 🙏
+
+_This library was created for educational purposes and excludes the intention to take information for which authorization to do so is not granted_
