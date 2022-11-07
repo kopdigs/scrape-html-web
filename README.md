@@ -23,10 +23,10 @@ const options = {
   url: "https://nodejs.org/en/blog/",
   mainSelector: ".blog-index",
   childrenSelector: [
-    { key: "date", selector: "time", attr: "" /* not essential if exist on type */, type: "text" },
+    { key: "date", selector: "time", type: "text" },
     // by default, the first option that is taken into consideration is att
-    { key: "version", selector: "a", attr: "" /* not essential if exist on type */ , type: "text" },
-    { key: "link", selector: "a", attr: "href", type: "" /* not essential if exist on attr */ },
+    { key: "version", selector: "a", type: "text" },
+    { key: "link", selector: "a", attr: "href" },
   ],
 };
 
@@ -109,9 +109,9 @@ const options = {
 const options = {
   ...
   childrenSelector: [
-    { key: "date", selector: "time", attr: "" /* not essential */, type: "text" },
-    { key: "version", selector: "a", attr: "" /* not essential */ , type: "text" },
-    { key: "link", selector: "a", attr: "href", type: "" /* not essential if exist on attr */ },
+    { key: "date", selector: "time", type: "text" },
+    { key: "version", selector: "a", type: "text" },
+    { key: "link", selector: "a", attr: "href" },
   ],
 };
 ```
