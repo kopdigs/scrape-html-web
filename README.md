@@ -11,13 +11,15 @@ npm install scrape-html-web
 ## Usage
 
 ```javascript
+import { scrapeHtmlWeb } from "scrape-html-web";
+
 //example
 const options = {
   url: "https://nodejs.org/en/blog/",
   mainSelector: ".blog-index",
   childrenSelector: [
-    { key: "date", selector: "time", attr: "", type: "text" },
-    { key: "version", selector: "a", attr: "", type: "text" },
+    { key: "date", selector: "time", attr: "" /* not essential */, type: "text" },
+    { key: "version", selector: "a", attr: "" /* not essential */ , type: "text" },
   ],
 };
 
