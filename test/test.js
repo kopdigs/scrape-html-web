@@ -1,4 +1,4 @@
-const scrapeHtmlWeb = require("../lib/scraper");
+import scrapeHtmlWeb from "../lib/scraper";
 
 /*
   Example 1:

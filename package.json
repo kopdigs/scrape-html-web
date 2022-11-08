@@ -1,11 +1,12 @@
 {
   "name": "scrape-html-web",
-  "version": "1.0.3",
+  "version": "1.0.14",
   "description": "Website scraper",
   "readmeFilename": "README.md",
   "main": "lib/scraper",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd test && node --experimental-modules --es-module-specifier-resolution=node test.js"
   },
   "repository": {
     "type": "git",
