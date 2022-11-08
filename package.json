@@ -1,9 +1,9 @@
 {
   "name": "scrape-html-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Website scraper",
   "readmeFilename": "README.md",
-  "main": "./lib/scraper",
+  "main": "lib/scraper",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
