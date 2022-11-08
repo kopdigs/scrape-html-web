@@ -19,8 +19,6 @@ _two dependencies are included in order to work:_
 
 To use Scrape HTML Web in your project, run:
 
-To use Scrape HTML Web in your project, run:
-
 ```
 npm install scrape-html-web
 # or `yarn add scrape-html-web`
@@ -138,7 +136,7 @@ const options = {
 
   > possible values: [ **text** , **html** ]
 
-  **\*\*\*\***\_\_**\*\*\*\*** **_optional_** **\*\*\*\***\_\_**\*\*\*\***
+  ********\_\_******** **_optional_** ********\_\_********
 
 - [replace](#replace) - with this parameter it is possible to have text or html inside a selector.
   It is possible to provide it with either a RegExp or a custom function \*\* _not required_
