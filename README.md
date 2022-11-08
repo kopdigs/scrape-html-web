@@ -79,9 +79,9 @@ const options = {
 
 ## options
 
-* [url](#url) - urls to scraper site web, _required_
-* [mainSelector](#mainselector) - indicates the main selector where to start scraping, ** _required_
-* [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive, ** _required_
+* [url](#url) - urls to scraper site web _required_
+* [mainSelector](#mainselector) - indicates the main selector where to start scraping ** _required_
+* [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive ** _required_
  
 #### url
 ```javascript
@@ -138,7 +138,7 @@ const options = {
   It is possible to provide it with either a RegExp or a custom function ** _not required_
   
 - canBeEmpty: - by default it is set to **false** ( grants the ability to leave the value of an element blank ) ** _not required_
-  > { key: "title", selector: ".title", type: "text", canBeEmpty: true },  Example response: {title: ''} if text in selector id empty
+  > { key: "title", selector: ".title", type: "text", canBeEmpty: true },  Example response: {title: ''} if text in selector is empty
 
 
 ##### replace
