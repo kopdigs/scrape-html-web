@@ -2,15 +2,25 @@
 
 Extract content from a static HTML website.
 
+_When you install Scrape HTML Web, no version of Chromium will be downloaded, unlike, for example, Puppeteer.
+This makes it a fast and light library._
+
+_Access to all websites is not guaranteed, this may depend on the authorization they have._
+
+_The library is asynchronous._
+
+
 **Note:**
 _two dependencies are included in order to work:_
 * [axios](https://www.npmjs.com/package/cheerio) - retrieve the web page
 * [cheerio](https://www.npmjs.com/package/axios) - manage content scraping based you have formatted selectors
 
 ## Installation
+To use Scrape HTML Web in your project, run:
 
 ```
 npm install scrape-html-web
+# or `yarn add scrape-html-web`
 ```
 
 ## Usage
@@ -118,7 +128,7 @@ const options = {
 
 - **key:** is the name of the key ** _required_
 - **selector:** is the name of the selector that is searched for in the HTML that is contained by the parent ** _required_
-- **attr:** _only for specific items_ [img, a] indicates what kind of attribute you want to get ** _not required_
+- **attr:** indicates what kind of attribute you want to get ** _not required_
   > Some of the more common attributes are − [ className, tagName, id, href, title, rel, src, style ] 
 - **type:** indicates the type of value to be obtained ** _not required_ (Default: "Text")
   > possible values: [ **text** , **html** ]
