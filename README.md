@@ -1,7 +1,5 @@
 # scrape-html-web
 
-<a href="https://www.buymeacoffee.com/simoneGatt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
-
 Extract content from a static HTML website.
 
 _When you install Scrape HTML Web, no version of Chromium will be downloaded, unlike, for example, Puppeteer.
@@ -206,6 +204,13 @@ const options = {
   },
 ];
 ```
+
+#### ❤️ Support
+
+If you make any profit from this or you just want to encourage me, you can offer me a coffee and I'll try to accommodate you.
+
+<a href="https://www.buymeacoffee.com/simoneGatt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
+
 
 #### Please note: 🙏
 
