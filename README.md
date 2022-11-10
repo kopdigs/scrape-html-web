@@ -2,6 +2,9 @@
 
 Extract content from a static HTML website.
 
+> ESM, React,Js
+> Node >=12
+
 _When you install Scrape HTML Web, no version of Chromium will be downloaded, unlike, for example, Puppeteer.
 This makes it a fast and light library._
 
@@ -27,7 +30,7 @@ npm install scrape-html-web
 ## Usage
 
 ```javascript
-import { scrapeHtmlWeb } from "scrape-html-web";
+import scrapeHtmlWeb from "scrape-html-web";
 
 //example
 const options = {
@@ -136,7 +139,7 @@ const options = {
 
   > possible values: [ **text** , **html** ]
 
-  ********\_\_******** **_optional_** ********\_\_********
+  **\*\*\*\***\_\_**\*\*\*\*** **_optional_** **\*\*\*\***\_\_**\*\*\*\***
 
 - [replace](#replace) - with this parameter it is possible to have text or html inside a selector.
   It is possible to provide it with either a RegExp or a custom function \*\* _not required_
@@ -210,7 +213,6 @@ const options = {
 If you make any profit from this or you just want to encourage me, you can offer me a coffee and I'll try to accommodate you.
 
 <a href="https://www.buymeacoffee.com/simoneGatt" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee"></a>
-
 
 #### Please note: 🙏
 
