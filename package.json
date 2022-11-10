@@ -1,12 +1,12 @@
 {
   "name": "scrape-html-web",
-  "version": "1.0.14",
+  "version": "1.1.1",
   "description": "Website scraper",
   "readmeFilename": "README.md",
   "main": "lib/scraper",
   "type": "module",
   "scripts": {
-    "test": "cd test && node --experimental-modules --es-module-specifier-resolution=node test.js"
+    "test": "cd test && node test.mjs"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,6 @@
     "cheerio": "^1.0.0-rc.12"
   },
   "engines": {
-    "node": ">=14.14"
+    "node": ">=12"
   }
 }

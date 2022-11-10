@@ -1,4 +1,4 @@
-import scrapeHtmlWeb from "../lib/scraper";
+import scrapeHtmlWeb from "../lib/scraper.js";
 
 /*
   Example 1:
