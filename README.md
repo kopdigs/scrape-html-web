@@ -1,3 +1,5 @@
+[![scrape-html-web](https://i.imgur.com/is50IvG.png)](#)
+
 # scrape-html-web
 
 Extract content from a static HTML website.
