@@ -141,7 +141,7 @@ const options = {
 
   > possible values: [ **text** , **html** ]
 
-  **\*\*\*\***\_\_**\*\*\*\*** **_optional_** **\*\*\*\***\_\_**\*\*\*\***
+  **_optional_**
 
 - [replace](#replace) - with this parameter it is possible to have text or html inside a selector.
   It is possible to provide it with either a RegExp or a custom function \*\* _not required_
@@ -160,13 +160,17 @@ const options = {
       key: "date",
       selector: "time",
       type: "text",
-      replace: (text) => text + " 2022", // I pass a custom function that adds the "2022" test to the date I get from the selector
+      replace: (text) => text + " 2022",
+      /* I pass a custom function that adds the
+      "2022" test to the date I get from the selector */
     },
     {
       key: "version",
       selector: "a",
       type: "html",
-      replace: /[{()}]/g, // I pass a regex to remove the round paraesthesia within the html
+      replace: /[{()}]/g,
+      /* I pass a regex to remove
+      the round paraesthesia within the html */
     },
     {
       key: "link",
