@@ -1,4 +1,4 @@
-import scrapeHtmlWeb from "../lib/scraper.js";
+const scrapeHtmlWeb = require("./scraper-test");
 
 /*
   Example 1:
@@ -51,6 +51,5 @@ const optionsSecondExample = {
 
 (async () => {
   const data = await scrapeHtmlWeb(optionsSecondExample);
-
   console.log("example 2 :", data);
 })();

@@ -1,5 +1,5 @@
-import axios from "axios";
-import cheerio from "cheerio";
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 async function getScraping(options) {
   let result = [];
@@ -9,6 +9,7 @@ async function getScraping(options) {
   await axios(`https://scrape-node.onrender.com/scraper?url=${url}`).then(
     (response) => {
       const html_data = response.data;
+
       const $ = cheerio.load(html_data);
 
       const selectedElem = mainSelector;
@@ -16,7 +17,7 @@ async function getScraping(options) {
       $(selectedElem).each((parentIndex, parentElem) => {
         $(parentElem)
           .children()
-          .each((childId, childElem) => {
+          .each((childIndex, childElem) => {
             let obj = {};
 
             $(childrenSelector).each((index, el) => {
@@ -78,6 +79,7 @@ async function getScraping(options) {
             if (Object.keys(obj).length) {
               result.push(obj);
             }
+
             if (!list) {
               return false;
             }
@@ -93,7 +95,7 @@ async function getScraping(options) {
   }
 }
 
-export async function scrapeHtmlWeb(options) {
+async function scrapeHtmlWeb(options) {
   try {
     const data = await getScraping(options);
 
@@ -103,4 +105,4 @@ export async function scrapeHtmlWeb(options) {
   }
 }
 
-export default scrapeHtmlWeb;
+module.exports = scrapeHtmlWeb;
