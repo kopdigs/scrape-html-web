@@ -80,7 +80,7 @@ async function getScraping(options) {
               result.push(obj);
             }
 
-            if (!list) {
+            if (list === false) {
               return false;
             }
           });
