@@ -84,8 +84,9 @@ const options = {
 ## options
 
 - [url](#url) - urls to scraper site web _required_
-- [mainSelector](#mainselector) - indicates the main selector where to start scraping \*\* _required_
-- [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive \*\* _required_
+- [mainSelector](#mainselector) - indicates the main selector where to start scraping _required_
+- [list](#list) - indicates that we need to iterate through a list of elements containing **mainSelector**, default is **True** _not required_
+- [childrenSelector](#childrenselector) - is an array made up of parameters to define the object we expect to receive _required_
 
 #### url
 
@@ -118,6 +119,18 @@ const options = {
       <a href="/en/blog/release/v19.0.1/">Node v19.0.1 (Current)</a>
     </li>
 </ul>
+```
+
+#### list
+
+```javascript
+const options = {
+  ...
+  list: true|false
+  // if false it will only loop once over the parent element
+  // if true it will loop through all elements below the parent element
+  ...
+};
 ```
 
 #### childrenSelector
