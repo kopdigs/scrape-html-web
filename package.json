@@ -1,6 +1,6 @@
 {
   "name": "scrape-html-web",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "description": "Website scraper",
   "readmeFilename": "README.md",
   "main": "lib/scraper",

@@ -7,9 +7,9 @@ async function getScraping(options) {
   const { url, mainSelector, childrenSelector, list } = options || {};
 
   await axios(
-    `https://rendertron.onrender.com/render/${encodeURIComponent(url)}`
+    `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`
   ).then((response) => {
-    const html_data = response.data;
+    const html_data = response.data.contents;
 
     const $ = cheerio.load(html_data);
 
